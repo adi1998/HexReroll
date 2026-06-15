@@ -22,5 +22,3 @@ tcli.exe
 *.exe
 
 **/__pycache__/
-
-/icons_workspace/frames/
