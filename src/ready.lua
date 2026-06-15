@@ -75,6 +75,15 @@ modutil.mod.Path.Wrap("CreateSpellButtons", function (base, screen)
 	end
 end)
 
+modutil.mod.Path.Wrap("AcceptAndCloseSpellScreen", function (base, screen, button)
+    base(screen, button)
+    if screen.MovedRerollUIGroup then
+		screen.MovedRerollUIGroup = nil
+		game.RemoveFromGroup({ Id = game.ScreenAnchors.Reroll, Names = { "Combat_Menu_Overlay" } })
+		game.AddToGroup({ Id = game.ScreenAnchors.Reroll, Name = "Combat_UI", DrawGroup = true })
+	end
+end)
+
 function mod.DestroySpellButtons(screen)
     local components = screen.Components
     local toDestroy = {}
