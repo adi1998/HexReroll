@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "zerp"
 name = "HexReroll"
-versionNumber = "1.0.1"
+versionNumber = "1.0.2"
 description = "Hades II mod allowing you to reroll Hexes"
 websiteUrl = "https://github.com/adi1998/HexReroll"
 containsNsfwContent = false
